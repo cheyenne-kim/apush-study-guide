@@ -28,6 +28,16 @@ main { flex: 1; padding: 2rem; max-width: 920px; }
 .section h2 { font-size: 1.5rem; margin-bottom: 0.4rem; color: #8b0000; }
 .unit-weight { display: inline-block; background: #fff0f0; color: #8b0000; font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 99px; margin-bottom: 0.75rem; }
 .intro { background: #fff0f0; border-left: 4px solid #8b0000; padding: 0.85rem 1rem; border-radius: 0 8px 8px 0; margin-bottom: 1.25rem; font-size: 0.92rem; line-height: 1.6; }
+.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.85rem; margin: 0 0 1.25rem; }
+.video-card { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 0.85rem; align-items: center; background: #fff; border: 1px solid #f0c0c0; border-radius: 10px; padding: 0.75rem; color: #1a0a0a; text-decoration: none; box-shadow: 0 2px 8px rgba(139,0,0,0.06); transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s; }
+.video-card:hover { transform: translateY(-1px); border-color: #8b0000; box-shadow: 0 8px 18px rgba(139,0,0,0.12); }
+.video-thumb { position: relative; aspect-ratio: 16 / 9; border-radius: 7px; overflow: hidden; background: #1a0a0a; }
+.video-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.video-play { position: absolute; inset: 0; display: grid; place-items: center; color: white; font-size: 1.35rem; text-shadow: 0 1px 4px rgba(0,0,0,0.45); background: rgba(139,0,0,0.13); }
+.video-copy { min-width: 0; }
+.video-label { display: block; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.7px; font-weight: 800; color: #c0392b; margin-bottom: 0.25rem; }
+.video-title { display: block; font-size: 0.92rem; font-weight: 750; line-height: 1.35; color: #8b0000; }
+.video-meta { display: block; margin-top: 0.3rem; font-size: 0.76rem; line-height: 1.35; color: #666; }
 .fgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.85rem; margin-bottom: 1.25rem; }
 .fc { background: white; border-radius: 10px; padding: 0.9rem 1rem; border: 1px solid #f0c0c0; box-shadow: 0 2px 8px rgba(139,0,0,0.05); }
 .fc h4 { font-size: 0.72rem; text-transform: uppercase; color: #c0392b; letter-spacing: 0.5px; margin-bottom: 0.4rem; }
@@ -121,6 +131,8 @@ h3.sh { margin: 1.1rem 0 0.65rem; color: #8b0000; font-size: 1.05rem; }
   nav button.active { border-bottom-color: #8b0000; border-left-color: transparent; }
   nav .pct { display: none; }
   main { padding: 1rem; }
+  .video-card { grid-template-columns: 96px minmax(0, 1fr); gap: 0.7rem; }
+  .video-title { font-size: 0.86rem; }
   .choices { grid-template-columns: 1fr; }
   .wys-grid { grid-template-columns: 1fr; }
   .wys-row > div:first-child { border-right: none; border-bottom: 1px solid #f5e0e0; }
@@ -199,6 +211,12 @@ h3.sh { margin: 1.1rem 0 0.65rem; color: #8b0000; font-size: 1.05rem; }
   <h2>Period 1: 1491–1607</h2>
   <span class="unit-weight">Exam weight: 4–6%</span>
   <div class="intro">Before European contact, diverse Native American societies had complex cultures, trade networks, and political structures. Columbus's 1492 voyage triggered the Columbian Exchange, reshaping the Americas, Europe, and Africa through the transfer of goods, diseases, people, and ideas.</div>
+  <div class="video-grid">
+    <a class="video-card" href="https://www.youtube.com/watch?v=jqf_c9Pw8gs" target="_blank" rel="noopener">
+      <span class="video-thumb"><img src="https://img.youtube.com/vi/jqf_c9Pw8gs/hqdefault.jpg" alt=""><span class="video-play">▶</span></span>
+      <span class="video-copy"><span class="video-label">Period 1 Tutorial</span><span class="video-title">1491-1607: Native America and European Contact</span><span class="video-meta">Heimler's History · YouTube</span></span>
+    </a>
+  </div>
   <div class="fgrid">
     <div class="fc"><h4>Columbian Exchange</h4><span class="f">Bidirectional transfer</span><p>Americas → Europe: corn, potatoes, tobacco, syphilis. Europe → Americas: horses, smallpox, Christianity, enslaved Africans</p></div>
     <div class="fc"><h4>Native Diversity</h4><span class="f">Hundreds of distinct nations</span><p>Pueblo (Southwest), Iroquois Confederacy (Northeast), Mississippian mound builders, Plains nomads</p></div>
@@ -323,6 +341,12 @@ h3.sh { margin: 1.1rem 0 0.65rem; color: #8b0000; font-size: 1.05rem; }
   <h2>Period 2: 1607–1754</h2>
   <span class="unit-weight">Exam weight: 6–8%</span>
   <div class="intro">European powers established distinct colonial societies in North America. English colonies developed regional differences shaped by geography, economic systems, and social structures. Conflicts with Native Americans intensified as colonists expanded westward, while Atlantic trade networks grew increasingly complex.</div>
+  <div class="video-grid">
+    <a class="video-card" href="https://www.youtube.com/watch?v=wq2jG_Ww_xc" target="_blank" rel="noopener">
+      <span class="video-thumb"><img src="https://img.youtube.com/vi/wq2jG_Ww_xc/hqdefault.jpg" alt=""><span class="video-play">▶</span></span>
+      <span class="video-copy"><span class="video-label">Period 2 Tutorial</span><span class="video-title">1607-1754: Colonial Societies and Atlantic Trade</span><span class="video-meta">Heimler's History · YouTube</span></span>
+    </a>
+  </div>
   <div class="fgrid">
     <div class="fc"><h4>New England</h4><span class="f">Puritan, covenant society</span><p>Town meetings, fishing/trade economy, religious dissent (Roger Williams, Anne Hutchinson)</p></div>
     <div class="fc"><h4>Chesapeake</h4><span class="f">Tobacco, indentured servants → slavery</span><p>Jamestown 1607; headright system; Bacon's Rebellion 1676 accelerates shift to slavery</p></div>
@@ -451,6 +475,12 @@ h3.sh { margin: 1.1rem 0 0.65rem; color: #8b0000; font-size: 1.05rem; }
   <h2>Period 3: 1754–1800</h2>
   <span class="unit-weight">Exam weight: 10–17%</span>
   <div class="intro">The French and Indian War (1754–1763) transformed British-colonial relations. Britain's attempt to tax colonists to pay war debts sparked the American Revolution. The new nation struggled to define itself under the Articles of Confederation, then the Constitution, navigating foreign policy crises and internal debates over federal power.</div>
+  <div class="video-grid">
+    <a class="video-card" href="https://www.youtube.com/watch?v=YhqXNJngvTo" target="_blank" rel="noopener">
+      <span class="video-thumb"><img src="https://img.youtube.com/vi/YhqXNJngvTo/hqdefault.jpg" alt=""><span class="video-play">▶</span></span>
+      <span class="video-copy"><span class="video-label">Period 3 Tutorial</span><span class="video-title">1754-1800: Revolution and the New Republic</span><span class="video-meta">Heimler's History · YouTube</span></span>
+    </a>
+  </div>
   <div class="fgrid">
     <div class="fc"><h4>French & Indian War</h4><span class="f">1754–1763</span><p>Britain wins, gains territory but accumulates debt → new taxation policies → colonial resistance</p></div>
     <div class="fc"><h4>Revolutionary Ideology</h4><span class="f">Enlightenment + republicanism</span><p>Locke's natural rights, virtual vs. actual representation, Common Sense (Paine 1776)</p></div>
@@ -595,6 +625,12 @@ h3.sh { margin: 1.1rem 0 0.65rem; color: #8b0000; font-size: 1.05rem; }
   <h2>Period 4: 1800–1848</h2>
   <span class="unit-weight">Exam weight: 10–17%</span>
   <div class="intro">The Market Revolution transformed the American economy through industrialization, transportation networks, and commercial agriculture. Democratic participation expanded for white men while African Americans, women, and Native Americans faced new restrictions. A wave of reform movements — abolitionism, temperance, women's rights — challenged the status quo.</div>
+  <div class="video-grid">
+    <a class="video-card" href="https://www.youtube.com/watch?v=XwPFSMxoD68" target="_blank" rel="noopener">
+      <span class="video-thumb"><img src="https://img.youtube.com/vi/XwPFSMxoD68/hqdefault.jpg" alt=""><span class="video-play">▶</span></span>
+      <span class="video-copy"><span class="video-label">Period 4 Tutorial</span><span class="video-title">1800-1848: The Market Revolution</span><span class="video-meta">Heimler's History · YouTube</span></span>
+    </a>
+  </div>
   <div class="fgrid">
     <div class="fc"><h4>Market Revolution</h4><span class="f">Industrialization + transportation</span><p>Erie Canal (1825), railroads, Lowell mills, interchangeable parts; North industrializes, South deepens slavery</p></div>
     <div class="fc"><h4>Jacksonian Democracy</h4><span class="f">1828–1840</span><p>Expanded white male suffrage; Indian Removal Act 1830; Bank War; spoils system; nullification crisis</p></div>
@@ -727,6 +763,12 @@ h3.sh { margin: 1.1rem 0 0.65rem; color: #8b0000; font-size: 1.05rem; }
   <h2>Period 5: 1844–1877</h2>
   <span class="unit-weight">Exam weight: 10–17%</span>
   <div class="intro">Sectional tensions over slavery's expansion exploded into Civil War. The Union's victory ended slavery but Reconstruction's promise of racial equality was ultimately undermined by Southern resistance, Northern fatigue, and the Supreme Court. The era fundamentally redefined American citizenship.</div>
+  <div class="video-grid">
+    <a class="video-card" href="https://www.youtube.com/watch?v=GFiFCusy75E" target="_blank" rel="noopener">
+      <span class="video-thumb"><img src="https://img.youtube.com/vi/GFiFCusy75E/hqdefault.jpg" alt=""><span class="video-play">▶</span></span>
+      <span class="video-copy"><span class="video-label">Period 5 Tutorial</span><span class="video-title">1844-1877: Expansion, Civil War, and Reconstruction</span><span class="video-meta">Maximum Insight · YouTube</span></span>
+    </a>
+  </div>
   <div class="fgrid">
     <div class="fc"><h4>Road to Civil War</h4><span class="f">1850s crises</span><p>Compromise of 1850; Fugitive Slave Act; Kansas-Nebraska Act 1854; "Bleeding Kansas"; Dred Scott 1857; John Brown</p></div>
     <div class="fc"><h4>Lincoln & Republicans</h4><span class="f">Free Soil, not abolition (at first)</span><p>Election of 1860 triggers secession; Fort Sumter April 1861; Emancipation Proclamation Jan 1, 1863</p></div>
@@ -857,6 +899,12 @@ h3.sh { margin: 1.1rem 0 0.65rem; color: #8b0000; font-size: 1.05rem; }
   <h2>Period 6: 1865–1898</h2>
   <span class="unit-weight">Exam weight: 10–17%</span>
   <div class="intro">Rapid industrialization transformed America into an industrial powerhouse, producing both enormous wealth and stark inequality. Waves of "new immigrants" from Southern and Eastern Europe reshaped cities. The "closing of the frontier," agrarian discontent, and urban labor conflict defined this era.</div>
+  <div class="video-grid">
+    <a class="video-card" href="https://www.youtube.com/watch?v=nv4MQgTtm5o" target="_blank" rel="noopener">
+      <span class="video-thumb"><img src="https://img.youtube.com/vi/nv4MQgTtm5o/hqdefault.jpg" alt=""><span class="video-play">▶</span></span>
+      <span class="video-copy"><span class="video-label">Period 6 Tutorial</span><span class="video-title">1865-1898: Industrial Capitalism and the Gilded Age</span><span class="video-meta">Heimler's History · YouTube</span></span>
+    </a>
+  </div>
   <div class="fgrid">
     <div class="fc"><h4>Industrialization</h4><span class="f">Robber Barons / Captains of Industry</span><p>Carnegie (steel), Rockefeller (oil); vertical & horizontal integration; trusts; Social Darwinism justifies inequality</p></div>
     <div class="fc"><h4>Labor Movement</h4><span class="f">Knights of Labor → AFL</span><p>Homestead Strike 1892; Pullman Strike 1894; Gompers's craft unionism; dangerous conditions, 12-hr days</p></div>
@@ -988,6 +1036,12 @@ h3.sh { margin: 1.1rem 0 0.65rem; color: #8b0000; font-size: 1.05rem; }
   <h2>Period 7: 1890–1945</h2>
   <span class="unit-weight">Exam weight: 10–17%</span>
   <div class="intro">America emerged as a global power through imperialism and two world wars. Domestically, Progressives reformed industrial capitalism, while the 1920s brought cultural conflict and prosperity before the Great Depression tested democratic capitalism. WWII ended the Depression and transformed America's global role.</div>
+  <div class="video-grid">
+    <a class="video-card" href="https://www.youtube.com/watch?v=v6awds-Jyco" target="_blank" rel="noopener">
+      <span class="video-thumb"><img src="https://img.youtube.com/vi/v6awds-Jyco/hqdefault.jpg" alt=""><span class="video-play">▶</span></span>
+      <span class="video-copy"><span class="video-label">Period 7 Tutorial</span><span class="video-title">1890-1945: World War II Strategy and U.S. Power</span><span class="video-meta">Heimler's History · YouTube</span></span>
+    </a>
+  </div>
   <div class="fgrid">
     <div class="fc"><h4>Progressivism</h4><span class="f">1900s–1920</span><p>Muckrakers; Roosevelt's Square Deal; Sherman Antitrust Act; 16th–19th Amendments; women's suffrage 1920</p></div>
     <div class="fc"><h4>American Imperialism</h4><span class="f">Spanish-American War 1898</span><p>Cuba, Philippines, Guam, Puerto Rico; Panama Canal; Roosevelt Corollary to Monroe Doctrine; "Big Stick"</p></div>
@@ -1134,6 +1188,12 @@ h3.sh { margin: 1.1rem 0 0.65rem; color: #8b0000; font-size: 1.05rem; }
   <h2>Period 8: 1945–1980</h2>
   <span class="unit-weight">Exam weight: 10–17%</span>
   <div class="intro">The Cold War shaped every aspect of American life — foreign policy, domestic politics, and culture. The Civil Rights Movement dismantled legal segregation. Lyndon Johnson's Great Society expanded the federal government. Vietnam, the counterculture, and Watergate eroded public trust in institutions.</div>
+  <div class="video-grid">
+    <a class="video-card" href="https://www.youtube.com/watch?v=YtQVkJ973NU" target="_blank" rel="noopener">
+      <span class="video-thumb"><img src="https://img.youtube.com/vi/YtQVkJ973NU/hqdefault.jpg" alt=""><span class="video-play">▶</span></span>
+      <span class="video-copy"><span class="video-label">Period 8 Tutorial</span><span class="video-title">1945-1980: Cold War Causes and Effects</span><span class="video-meta">Heimler's History · YouTube</span></span>
+    </a>
+  </div>
   <div class="fgrid">
     <div class="fc"><h4>Cold War Origins</h4><span class="f">Containment doctrine</span><p>Truman Doctrine; Marshall Plan; NATO; NSC-68; Korean War; Eisenhower's "military-industrial complex" warning</p></div>
     <div class="fc"><h4>McCarthyism</h4><span class="f">Red Scare 1950–1954</span><p>HUAC; Hollywood Ten; Rosenberg executions; McCarthy's downfall (Army-McCarthy hearings 1954)</p></div>
@@ -1267,6 +1327,12 @@ h3.sh { margin: 1.1rem 0 0.65rem; color: #8b0000; font-size: 1.05rem; }
   <h2>Period 9: 1980–Present</h2>
   <span class="unit-weight">Exam weight: 4–6%</span>
   <div class="intro">Ronald Reagan's election marked a conservative realignment in American politics. The Cold War ended, but new challenges — globalization, terrorism, economic inequality, and debates over the role of government — defined the era. Technology transformed daily life and the economy.</div>
+  <div class="video-grid">
+    <a class="video-card" href="https://www.youtube.com/watch?v=__WPDcQHlpE" target="_blank" rel="noopener">
+      <span class="video-thumb"><img src="https://img.youtube.com/vi/__WPDcQHlpE/hqdefault.jpg" alt=""><span class="video-play">▶</span></span>
+      <span class="video-copy"><span class="video-label">Period 9 Tutorial</span><span class="video-title">1980-Present: Reagan and the End of the Cold War</span><span class="video-meta">Heimler's History · YouTube</span></span>
+    </a>
+  </div>
   <div class="fgrid">
     <div class="fc"><h4>Reagan Revolution</h4><span class="f">Conservative realignment</span><p>Supply-side economics ("Reaganomics"); deregulation; tax cuts; Cold War escalation; "Morning in America"</p></div>
     <div class="fc"><h4>End of Cold War</h4><span class="f">1989–1991</span><p>Berlin Wall falls 1989; Soviet Union dissolves 1991; debates over Reagan's vs. Gorbachev's role</p></div>
